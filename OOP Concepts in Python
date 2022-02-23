@@ -1,0 +1,393 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "OOP Concepts in Python.ipynb",
+      "provenance": [],
+      "authorship_tag": "ABX9TyO2KGXvi0+ZDtORnTGm6i2U",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/golveobryan/OOP-58002/blob/main/OOP%20Concepts%20in%20Python\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create Class"
+      ],
+      "metadata": {
+        "id": "fXC9-KMW5mGs"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Car:\n",
+        "  pass"
+      ],
+      "metadata": {
+        "id": "5CBLhC1n556V"
+      },
+      "execution_count": 2,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Create an Object"
+      ],
+      "metadata": {
+        "id": "dsyZX1u658-1"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Car:\n",
+        " def __init__(self,name,color): #all classes have function called __init__:\n",
+        "  self.name = name              #attribute names of class named Card\n",
+        "  self.color = color\n",
+        "\n",
+        " def description(self):\n",
+        "    return \"The\" + self.name +\"has a color\" + self.color\n",
+        "\n",
+        " def show(self):\n",
+        "  print(\"The\"+\" \"+self.name+\" \"+\"has a color\"+\" \"+self.color)\n",
+        "\n",
+        "car1 = Car(\"Honda City\",\"White\")\n",
+        "car1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hzC5jwM05-uF",
+        "outputId": "8b02ca04-b3a4-47f3-ad04-3ae464d35971"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Honda City has a color White\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Object Methods"
+      ],
+      "metadata": {
+        "id": "cpYVirvM6E7N"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        " def __init__(self,name,age):\n",
+        "  self.name = name \n",
+        "  self.age = age\n",
+        " def myFunction(self):\n",
+        "  print(\"Hello! My names is\",self.name)\n",
+        "  print(\"I am\",self.age,\"Years old\")\n",
+        "\n",
+        "p1= Person(\"Bryan\",27)\n",
+        "p1.myFunction()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ymbPXWEr6HU1",
+        "outputId": "13cd83e5-3006-40e0-a4e7-1a0e9a14a6b0"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Hello! My names is Bryan\n",
+            "I am 27 Years old\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Car:\n",
+        " def __init__(self,name,color): #all classes have function called __init__:\n",
+        "  self.name = name              #attribute names of class named Card\n",
+        "  self.color = color\n",
+        "\n",
+        " def description(self):\n",
+        "    return \"The\" + self.name +\"has a color\" + self.color\n",
+        "\n",
+        " def show(self):\n",
+        "  print(\"The\"+\" \"+self.name+\" \"+\"has a color\"+\" \"+self.color)\n",
+        "\n",
+        "car1 = Car(\"Honda City\",\"White\")\n",
+        "car1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "cT7sSn0x6aZG",
+        "outputId": "c5e4430a-0b4b-4d25-d767-437fd7805403"
+      },
+      "execution_count": 5,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Honda City has a color White\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Modify and Object Property"
+      ],
+      "metadata": {
+        "id": "eqVljNGP6jgl"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "car1.name = \"Mitsubishi\"\n",
+        "print(car1.name)\n",
+        "\n",
+        "car1.color = \"Silver\"\n",
+        "print(car1.color)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QcEMvLmq6kVs",
+        "outputId": "1c41fb5a-1553-4df8-a5a1-fb9cb8792705"
+      },
+      "execution_count": 6,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mitsubishi\n",
+            "Silver\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "car1.show()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JxQDCTr66rzk",
+        "outputId": "1842ea5e-b5ed-4a22-b754-9f7c99e71626"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The Mitsubishi has a color Silver\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Detete an Object Property"
+      ],
+      "metadata": {
+        "id": "CQvsJTaB6wF9"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "del car1.color\n",
+        "print(car1.color)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 182
+        },
+        "id": "my99fr6a6w1N",
+        "outputId": "040055b2-4d72-4aff-c0bb-977b0cc9e287"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-8-4849355a0500>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0;32mdel\u001b[0m \u001b[0mcar1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolor\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcar1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolor\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m: 'Car' object has no attribute 'color'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(car1.name)\n",
+        "print(car1.color)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 200
+        },
+        "id": "WtfvqFkI6_F8",
+        "outputId": "603155da-8f30-41a6-aac1-a0a863bef63c"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Mitsubishi\n"
+          ]
+        },
+        {
+          "output_type": "error",
+          "ename": "AttributeError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m                            Traceback (most recent call last)",
+            "\u001b[0;32m<ipython-input-9-b3300dc57d2d>\u001b[0m in \u001b[0;36m<module>\u001b[0;34m()\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcar1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mname\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0;32m----> 2\u001b[0;31m \u001b[0mprint\u001b[0m\u001b[0;34m(\u001b[0m\u001b[0mcar1\u001b[0m\u001b[0;34m.\u001b[0m\u001b[0mcolor\u001b[0m\u001b[0;34m)\u001b[0m\u001b[0;34m\u001b[0m\u001b[0;34m\u001b[0m\u001b[0m\n\u001b[0m",
+            "\u001b[0;31mAttributeError\u001b[0m: 'Car' object has no attribute 'color'"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Area of a Square = s*s\n",
+        "#Perimeter of a Square = 4*s = s+s+s+s\n",
+        "\n",
+        "class Square:\n",
+        " def __init__(self,side):\n",
+        "  self.side = side\n",
+        "\n",
+        " def Area(self):\n",
+        "  return self.side*self.side\n",
+        "\n",
+        " def Perimeter(self):\n",
+        "  return 4*(self.side)\n",
+        "\n",
+        " def display(self):\n",
+        "  print(\"The area of a square is\",self.Area())\n",
+        "  print(\"The perimeter of a square is\",self.Perimeter())\n",
+        "\n",
+        "sq1 = Square(2)\n",
+        "sq1.display()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "hhFSWDdP7Ip9",
+        "outputId": "499fbda3-04f6-4d12-ec97-cef7e4358802"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The area of a square is 4\n",
+            "The perimeter of a square is 8\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Application 2 - Write a Python program that displays your sudent no. and fullname(Surname, First Name MI) and create a class name OOP_58002"
+      ],
+      "metadata": {
+        "id": "Uv0yVZ3O7T8M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "class Person:\n",
+        " def __init__(self,student,number):\n",
+        "  self.student = student\n",
+        "  self.number = number\n",
+        "\n",
+        " def myFunction(self):\n",
+        "  print(\"I am\",self.student,\"and my student number is\", self.number)\n",
+        "  print(\"Section - OOP_58002\")\n",
+        "\n",
+        "\n",
+        "p1= Person(\"Golveo, Bryan D. \", 202150706)\n",
+        "p1.myFunction()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "4T9ddT597Vi1",
+        "outputId": "c05e0f66-1229-47b9-e7d4-5e14a3ac6e33"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "I am Golveo, Bryan D.  and my student number is 202150706\n",
+            "Section - OOP_58002\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
