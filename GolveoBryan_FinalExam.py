@@ -46,7 +46,7 @@ btn1.grid(row=4, column = 1)
 lbl5 = Label(window,text="The smallest number:")
 lbl5.grid(row=5,column=0,sticky=W)
 conOfLargest = StringVar()
-ent5 = Entry(window,bd=3,state="readonly",textvariable=conOfLargest)
+ent5 = Entry(window,bd=3,state="readonly",textvariable=conOfsmallest)
 ent5.grid(row=5,column=1)
 
 
